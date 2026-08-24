@@ -28,7 +28,7 @@ fun LazyListScope.geofenceEventSourceItem(navController: NavHostController) {
         val viewModel: GeofenceSettingsViewModel = hiltViewModel()
         val config by viewModel.geofenceConfig.collectAsStateWithLifecycle()
         ListItem(
-            headlineContent = { Text("Geofence Events") },
+            headlineContent = { Text("地理围栏事件") },
             leadingContent = { Icon(Icons.Default.LocationOn, contentDescription = null) },
             trailingContent = {
                 Row(verticalAlignment = Alignment.CenterVertically) {

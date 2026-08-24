@@ -248,7 +248,7 @@ fun GeofenceMapScreen(
                         },
                         enabled = canSave,
                     ) {
-                        Text("Save")
+                        Text("保存")
                     }
                 },
                 colors =
@@ -263,7 +263,7 @@ fun GeofenceMapScreen(
             OutlinedTextField(
                 value = name,
                 onValueChange = { name = it },
-                placeholder = { Text("Zone name") },
+                placeholder = { Text("区域名称") },
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
                 singleLine = true,
             )
@@ -348,14 +348,14 @@ fun GeofenceMapScreen(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
-                        Text("Enter", style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                        Text("进入时", style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
                         Switch(checked = notifyOnEnter, onCheckedChange = { notifyOnEnter = it })
                     }
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
-                        Text("Exit", style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                        Text("离开时", style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
                         Switch(checked = notifyOnExit, onCheckedChange = { notifyOnExit = it })
                     }
                 }
@@ -410,7 +410,7 @@ fun GeofenceMapScreen(
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
-                    placeholder = { Text("Search address") },
+                    placeholder = { Text("搜索地址") },
                     trailingIcon = {
                         IconButton(onClick = {
                             coroutineScope.launch(Dispatchers.IO) {

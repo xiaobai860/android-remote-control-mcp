@@ -65,10 +65,10 @@ fun ChannelSettingsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Event Channel") },
+                title = { Text("事件通道") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "返回")
                     }
                 },
             )
@@ -81,7 +81,7 @@ fun ChannelSettingsScreen(
                 OutlinedTextField(
                     value = endpointUrlInput,
                     onValueChange = { viewModel.updateEndpointUrl(it) },
-                    label = { Text("Endpoint URL") },
+                    label = { Text("端点 URL") },
                     isError = endpointUrlError != null,
                     supportingText = endpointUrlError?.let { { Text(it) } },
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
@@ -92,7 +92,7 @@ fun ChannelSettingsScreen(
                 OutlinedTextField(
                     value = authTokenInput,
                     onValueChange = { viewModel.updateAuthToken(it) },
-                    label = { Text("Auth Token") },
+                    label = { Text("认证令牌") },
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
                     singleLine = true,
                     keyboardOptions =
@@ -111,18 +111,18 @@ fun ChannelSettingsScreen(
                             IconButton(onClick = { tokenVisible = !tokenVisible }) {
                                 Icon(
                                     if (tokenVisible) Icons.Default.VisibilityOff else Icons.Default.Visibility,
-                                    contentDescription = if (tokenVisible) "Hide" else "Show",
+                                    contentDescription = if (tokenVisible) "隐藏" else "显示",
                                 )
                             }
                             IconButton(
                                 onClick = { clipboardManager.setText(AnnotatedString(authTokenInput)) },
                             ) {
-                                Icon(Icons.Default.ContentCopy, contentDescription = "Copy")
+                                Icon(Icons.Default.ContentCopy, contentDescription = "复制")
                             }
                             IconButton(
                                 onClick = { viewModel.generateNewAuthToken() },
                             ) {
-                                Icon(Icons.Default.Refresh, contentDescription = "Generate new")
+                                Icon(Icons.Default.Refresh, contentDescription = "重新生成")
                             }
                         }
                     },
@@ -130,8 +130,8 @@ fun ChannelSettingsScreen(
             }
             item {
                 ListItem(
-                    headlineContent = { Text("Auto-start at boot") },
-                    supportingContent = { Text("Start event channel when device boots") },
+                    headlineContent = { Text("开机自启动") },
+                    supportingContent = { Text("设备开机时启动事件通道") },
                     trailingContent = {
                         Switch(
                             checked = config.enabled,
@@ -142,13 +142,13 @@ fun ChannelSettingsScreen(
             }
             item {
                 Text(
-                    "Event Sources",
+                    "事件来源",
                     modifier = Modifier.padding(start = 16.dp, top = 16.dp, bottom = 8.dp),
                 )
             }
             item {
                 ListItem(
-                    headlineContent = { Text("Notification Events") },
+                    headlineContent = { Text("通知事件") },
                     leadingContent = { Icon(Icons.Default.Notifications, contentDescription = null) },
                     trailingContent = {
                         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -165,7 +165,7 @@ fun ChannelSettingsScreen(
             }
             item {
                 ListItem(
-                    headlineContent = { Text("WiFi Events") },
+                    headlineContent = { Text("WiFi 事件") },
                     leadingContent = { Icon(Icons.Default.Wifi, contentDescription = null) },
                     trailingContent = {
                         Row(verticalAlignment = Alignment.CenterVertically) {

@@ -53,7 +53,7 @@ fun NotificationFilterScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Notification Filter") },
+                title = { Text("通知过滤") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back")
@@ -82,7 +82,7 @@ fun NotificationFilterScreen(
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
-                    label = { Text("Search apps") },
+                    label = { Text("搜索应用") },
                     modifier = Modifier.fillMaxWidth().padding(16.dp),
                     singleLine = true,
                 )

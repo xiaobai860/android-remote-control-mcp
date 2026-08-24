@@ -108,7 +108,7 @@ private fun SettingsEntriesColumn(
         )
         SettingsEntry(
             icon = Icons.Default.CellTower,
-            title = "Event Channel",
+            title = "事件通道",
             subtitle = stringResource(R.string.event_channel_subtitle),
             onClick = { onNavigate(SettingsRoute.ChannelSettings.route) },
         )

@@ -44,10 +44,10 @@ fun WifiMonitorScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("WiFi Monitor") },
+                title = { Text("WiFi 监控") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "返回")
                     }
                 },
             )
@@ -59,7 +59,7 @@ fun WifiMonitorScreen(
                     headlineContent = { Text(ssid) },
                     trailingContent = {
                         IconButton(onClick = { viewModel.removeWifiSsid(ssid) }) {
-                            Icon(Icons.Default.Delete, contentDescription = "Remove")
+                            Icon(Icons.Default.Delete, contentDescription = "删除")
                         }
                     },
                 )
@@ -84,14 +84,14 @@ fun WifiMonitorScreen(
                             }
                         },
                     ) {
-                        Icon(Icons.Default.Add, "Add")
+                        Icon(Icons.Default.Add, "添加")
                     }
                 }
             }
             item {
                 ListItem(
-                    headlineContent = { Text("Notify on discovered") },
-                    supportingContent = { Text("Scan-based, may be delayed") },
+                    headlineContent = { Text("发现时通知") },
+                    supportingContent = { Text("基于扫描，可能有延迟") },
                     trailingContent = {
                         Switch(
                             checked = config.wifi.notifyOnDiscovered,
@@ -102,8 +102,8 @@ fun WifiMonitorScreen(
             }
             item {
                 ListItem(
-                    headlineContent = { Text("Notify on lost") },
-                    supportingContent = { Text("Scan-based, may be delayed") },
+                    headlineContent = { Text("丢失时通知") },
+                    supportingContent = { Text("基于扫描，可能有延迟") },
                     trailingContent = {
                         Switch(
                             checked = config.wifi.notifyOnLost,
@@ -114,8 +114,8 @@ fun WifiMonitorScreen(
             }
             item {
                 ListItem(
-                    headlineContent = { Text("Notify on connected") },
-                    supportingContent = { Text("Real-time") },
+                    headlineContent = { Text("连接时通知") },
+                    supportingContent = { Text("实时") },
                     trailingContent = {
                         Switch(
                             checked = config.wifi.notifyOnConnected,
@@ -126,8 +126,8 @@ fun WifiMonitorScreen(
             }
             item {
                 ListItem(
-                    headlineContent = { Text("Notify on disconnected") },
-                    supportingContent = { Text("Real-time") },
+                    headlineContent = { Text("断开时通知") },
+                    supportingContent = { Text("实时") },
                     trailingContent = {
                         Switch(
                             checked = config.wifi.notifyOnDisconnected,

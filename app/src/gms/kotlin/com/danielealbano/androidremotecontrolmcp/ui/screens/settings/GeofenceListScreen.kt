@@ -96,17 +96,17 @@ fun GeofenceListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Geofence Zones") },
+                title = { Text("地理围栏区域") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "返回")
                     }
                 },
             )
         },
         floatingActionButton = {
             FloatingActionButton(onClick = { onNavigateToMap(null) }) {
-                Icon(Icons.Default.Add, "Add zone")
+                Icon(Icons.Default.Add, "添加区域")
             }
         },
     ) { padding ->
@@ -116,7 +116,7 @@ fun GeofenceListScreen(
                 contentAlignment = Alignment.Center,
             ) {
                 Text(
-                    "No geofence zones configured",
+                    "尚未配置地理围栏区域",
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -142,7 +142,7 @@ fun GeofenceListScreen(
                         trailingContent = {
                             Row {
                                 IconButton(onClick = { zoneToDelete = zone }) {
-                                    Icon(Icons.Default.Delete, "Delete")
+                                    Icon(Icons.Default.Delete, "删除")
                                 }
                             }
                         },
@@ -155,19 +155,19 @@ fun GeofenceListScreen(
         zoneToDelete?.let { zone ->
             AlertDialog(
                 onDismissRequest = { zoneToDelete = null },
-                title = { Text("Delete zone?") },
-                text = { Text("Remove \"${zone.name}\"?") },
+                title = { Text("删除区域？") },
+                text = { Text("移除 \"${zone.name}\"？") },
                 confirmButton = {
                     TextButton(onClick = {
                         viewModel.removeGeofenceZone(zone.id)
                         zoneToDelete = null
                     }) {
-                        Text("Delete")
+                        Text("删除")
                     }
                 },
                 dismissButton = {
                     TextButton(onClick = { zoneToDelete = null }) {
-                        Text("Cancel")
+                        Text("取消")
                     }
                 },
             )
