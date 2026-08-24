@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="event_channel_subtitle">通知、WiFi 和地理柵欄事件轉發</string>
+    <!-- gms: Location rationale mentions geofences (overrides the main default) -->
+    <string name="permission_location_rationale">讀取 GPS 位置並觸發地理柵欄。</string>
+    <!-- gms: Background Location permission row (geofence-only) -->
+    <string name="permission_background_location">後臺位置</string>
+    <string name="permission_background_location_open_settings">開啟設定</string>
+    <string name="permission_background_location_rationale">在後臺觸發地理柵欄事件。</string>
+</resources>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Remote Control MCP</string>
+    <string name="share_target_label">Android Remote Control MCP</string>
+
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_description">透過 MCP 協議提供遠端控制能力。允許檢視裝置上的 UI 元素並執行操作。</string>
+
+    <!-- Notification Channel -->
+    <string name="notification_channel_mcp_server_id">mcp_server_channel</string>
+    <string name="notification_channel_mcp_server_name">MCP 伺服器</string>
+    <!-- Notification Content -->
+    <string name="notification_mcp_server_title">MCP 伺服器執行中</string>
+
+    <!-- App Bar -->
+    <string name="app_bar_title">MCP 遠端控制</string>
+
+    <!-- Tabs -->
+    <string name="tab_server">伺服器</string>
+    <string name="tab_settings">設定</string>
+    <string name="tab_about">關於</string>
+
+    <!-- Settings Sub-pages -->
+    <string name="settings_general_title">常規</string>
+    <string name="settings_general_subtitle">連接埠、地址、裝置、開機自動啟動</string>
+    <string name="settings_access_title">存取</string>
+    <string name="settings_access_subtitle">OAuth、Bearer 權杖、已連線用戶端</string>
+    <string name="settings_security_title">安全</string>
+    <string name="settings_security_subtitle">HTTPS、憑證</string>
+    <string name="settings_tunnel_title">隧道</string>
+    <string name="settings_tunnel_subtitle">Cloudflare、ngrok</string>
+    <string name="settings_mcp_tools_title">MCP 工具</string>
+    <string name="settings_mcp_tools_subtitle">啟用或停用工具</string>
+    <string name="settings_mcp_tools_placeholder">工具權限——將在下一個更新中提供</string>
+    <string name="settings_mcp_tools_missing_permission">未授予權限——這些工具已對用戶端隱藏。輕觸以授予。</string>
+    <string name="settings_mcp_tools_param_missing_permission">未授予權限——此選項不可用。輕觸以授予。</string>
+    <string name="settings_permissions_title">權限</string>
+    <string name="settings_permissions_subtitle">無障礙、相機、麥克風</string>
+    <string name="settings_storage_title">儲存</string>
+    <string name="settings_storage_subtitle">儲存位置、檔案限制</string>
+
+    <!-- About Screen -->
+    <string name="about_author_section">作者</string>
+    <string name="about_author_name">Daniele Salvatore Albano</string>
+    <string name="about_author_email">d.albano@gmail.com</string>
+    <string name="about_author_linkedin">linkedin.com/in/danielesalvatorealbano</string>
+    <string name="about_author_x">x.com/daniele_dll</string>
+    <string name="about_links_section">連結</string>
+    <string name="about_link_github">GitHub 倉庫</string>
+    <string name="about_link_license">MIT 許可證</string>
+    <string name="about_link_issues">報告問題</string>
+    <string name="about_attributions_section">歸屬</string>
+    <string name="about_attribution_dbip">IP 地理位置資料來自 DB-IP (db-ip.com)，遵循 CC BY 4.0 許可。</string>
+    <string name="about_attribution_privacy_model">隱私權模式 PII 偵測模型由 Ai4Privacy 提供（MIT 許可）。基於 Llama 構建。</string>
+    <string name="about_footer">開源，MIT 許可證</string>
+
+    <!-- Clipboard -->
+    <string name="copied_to_clipboard">已複製到剪貼簿</string>
+
+    <!-- Server Status -->
+    <string name="server_status_title">伺服器狀態</string>
+    <string name="server_status_running">執行中</string>
+    <string name="server_status_stopped">已停止</string>
+    <string name="server_status_starting">正在啟動…</string>
+    <string name="server_status_stopping">正在停止…</string>
+    <string name="server_status_error">錯誤：%1$s</string>
+    <string name="server_action_start">啟動</string>
+    <string name="server_action_stop">停止</string>
+
+    <!-- Configuration -->
+    <string name="configuration_title">配置</string>
+    <string name="config_binding_address_label">繫結地址</string>
+    <string name="config_binding_localhost">本機 (127.0.0.1)</string>
+    <string name="config_binding_network">網路 (0.0.0.0)</string>
+    <string name="config_port_label">連接埠</string>
+    <string name="config_device_slug_label">裝置標識（可選）</string>
+    <string name="config_device_slug_hint">例如：pixel7、work_phone</string>
+    <string name="config_bearer_token_label">Bearer 權杖</string>
+    <string name="config_token_show">顯示權杖</string>
+    <string name="config_token_hide">隱藏權杖</string>
+    <string name="config_token_copy">複製權杖</string>
+    <string name="config_token_regenerate">重新生成權杖</string>
+    <string name="config_token_clear">清除權杖</string>
+    <string name="config_bearer_token_empty_warning_title">驗證已停用</string>
+    <string name="config_bearer_token_empty_warning_body">Bearer 權杖為空，因此 MCP 伺服器接受任何可存取它的使用者的未驗證請求。請停止伺服器（如果正在執行），然後按\"重新生成權杖\"以啟用驗證。</string>
+    <string name="config_auto_start_label">開機自動啟動</string>
+    <string name="config_hide_from_recents_label">從最近任務中隱藏</string>
+    <string name="config_hide_from_recents_description">將應用程式從 Android 的最近任務概覽中排除。</string>
+    <string name="config_tool_call_indicator_label">顯示工具呼叫指示器</string>
+    <string name="config_tool_call_indicator_description">當 MCP 控制此裝置時，顯示隱私權安全的浮動圖層。</string>
+    <string name="config_https_enabled_label">啟用 HTTPS</string>
+    <string name="config_certificate_title">HTTPS 憑證</string>
+    <string name="config_cert_auto_generated">自動生成的自簽章憑證</string>
+    <string name="config_cert_custom">自定義憑證 (.p12/.pfx)</string>
+    <string name="config_hostname_label">憑證主機名稱</string>
+
+    <!-- Network Security Warning -->
+    <string name="network_warning_title">網路暴露警告</string>
+    <string name="network_warning_message">繫結到 0.0.0.0 將使 MCP 伺服器可被以下裝置存取：\n\n\u2022 當前 WiFi 網路上的所有裝置\n\u2022 連線到您熱點的裝置\n\u2022 根據網路配置可能存取到的其他裝置\n\n在公開/不受信任的網路中使用此選項存在安全風險。\n\n請僅在受信任的專用網路上使用此選項。</string>
+    <string name="network_warning_confirm">我瞭解，繼續</string>
+    <string name="network_warning_cancel">取消</string>
+
+    <!-- Permissions -->
+    <string name="permissions_title">權限</string>
+    <string name="permission_accessibility">無障礙服務</string>
+    <string name="permission_notifications">通知</string>
+    <string name="permission_enable">啟用</string>
+    <string name="permission_enabled">已啟用</string>
+    <string name="permission_granted">已授予</string>
+    <string name="permission_grant">授予</string>
+    <string name="permission_camera">相機</string>
+    <string name="permission_microphone">麥克風</string>
+    <string name="permission_notification_listener">通知監聽器</string>
+    <string name="permission_location">位置</string>
+
+    <!-- Permissions screen: section headers -->
+    <string name="permission_section_required_title">必需</string>
+    <string name="permission_section_required_subtitle">應用程式控制您的裝置所需。</string>
+    <string name="permission_section_required_if_title">使用相應功能時需要</string>
+    <string name="permission_section_required_if_subtitle">僅授予您計劃使用的功能權限。</string>
+    <string name="permission_section_optional_title">可選</string>
+    <string name="permission_section_optional_subtitle">錦上添花；沒有它們一切照常工作。</string>
+    <!-- Permissions screen: per-permission rationale (default / foss values) -->
+    <string name="permission_accessibility_rationale">讀取螢幕並執行輕觸、滑動和輸入操作。</string>
+    <string name="permission_notifications_rationale">OAuth 核准提示、事件通道警報和伺服器狀態。</string>
+    <string name="permission_notification_listener_rationale">讀取並處理裝置通知。</string>
+    <string name="permission_camera_rationale">拍照和錄製影片。</string>
+    <string name="permission_location_rationale">讀取 GPS 位置。</string>
+    <string name="permission_microphone_rationale">為錄製的影片新增音訊。</string>
+
+    <!-- Permission Warning (main screen: accessibility is the one required permission) -->
+    <string name="permission_warning_title">需要無障礙權限</string>
+    <string name="permission_warning_action">前往權限設定</string>
+    <string name="server_pending_approvals_title">%1$d 個待處理的連線核准</string>
+    <string name="server_pending_approvals_action">檢視</string>
+
+    <!-- Network Access Suggestion (main screen: localhost-only bind with no tunnel) -->
+    <string name="server_network_access_suggestion_title">僅此裝置可存取</string>
+    <string name="server_network_access_suggestion_wifi">啟用 Wi-Fi 存取</string>
+    <string name="server_network_access_suggestion_tunnel">設定隧道</string>
+
+    <!-- Battery Optimization -->
+    <string name="battery_optimization_card_title">保持伺服器執行</string>
+    <string name="battery_optimization_card_action">關閉電池最佳化</string>
+
+    <!-- Server Logs -->
+    <string name="server_logs_title">伺服器日誌</string>
+    <string name="server_logs_empty">暫無日誌條目</string>
+    <string name="server_logs_show_more">顯示更多</string>
+    <string name="server_logs_clear">清除日誌</string>
+    <string name="server_logs_clear_dialog_title">清除日誌？</string>
+    <string name="server_logs_clear_dialog_body">所有伺服器日誌條目將被永久刪除。</string>
+    <string name="server_logs_clear_dialog_confirm">清除</string>
+    <string name="server_logs_clear_dialog_cancel">取消</string>
+    <string name="server_logs_type_tool_call">工具呼叫</string>
+    <string name="server_logs_type_tunnel">隧道</string>
+    <string name="server_logs_type_server">伺服器</string>
+    <string name="server_logs_type_oauth">OAuth</string>
+    <string name="server_logs_type_auth">驗證</string>
+    <string name="server_logs_type_channel">通道</string>
+    <string name="server_logs_type_settings">設定</string>
+    <string name="server_logs_type_privacy">隱私權</string>
+
+    <!-- Remote Access / Tunnel -->
+    <string name="remote_access_title">遠端存取</string>
+    <string name="remote_access_enabled_label">啟用遠端存取</string>
+    <string name="remote_access_provider_label">隧道提供商</string>
+    <string name="remote_access_provider_cloudflare">Cloudflare</string>
+    <string name="remote_access_provider_cloudflare_desc">無需賬戶</string>
+    <string name="remote_access_provider_ngrok">ngrok</string>
+    <string name="remote_access_provider_ngrok_desc">需要賬戶</string>
+    <string name="remote_access_ngrok_authtoken_label">ngrok 驗證權杖</string>
+    <string name="remote_access_ngrok_domain_label">網域（可選）</string>
+    <string name="remote_access_ngrok_domain_hint">留空以自動分配</string>
+    <string name="remote_access_status_disconnected">已中斷連線</string>
+    <string name="remote_access_status_connecting">正在連線…</string>
+    <string name="remote_access_status_connected">已連線</string>
+    <string name="remote_access_status_error">錯誤：%1$s</string>
+    <string name="remote_access_public_url_label">公開 URL</string>
+    <string name="remote_access_ngrok_unsupported">此裝置上無法使用 ngrok（需要 arm64-v8a 或 x86_64）</string>
+    <string name="remote_access_cloudflare_mode_label">Cloudflare 模式</string>
+    <string name="remote_access_cloudflare_mode_free">免費</string>
+    <string name="remote_access_cloudflare_mode_free_desc">隨機臨時 URL，無需賬戶</string>
+    <string name="remote_access_cloudflare_mode_token">使用 Token</string>
+    <string name="remote_access_cloudflare_mode_token_desc">透過您的 Cloudflare 賬戶使用靜態主機名稱</string>
+    <string name="remote_access_cloudflare_token_label">Cloudflare Tunnel Token</string>
+    <string name="remote_access_cloudflare_extra_args_label">附加引數</string>
+    <string name="remote_access_cloudflare_extra_args_hint">--edge region1.v2.argotunnel.com:7844</string>
+    <string name="remote_access_cloudflare_extra_args_help">傳遞給 cloudflared 的可選標誌（例如指定 --edge 以繞過 DNS 問題）</string>
+    <string name="remote_access_cloudflare_service_url_help">在您的 Cloudflare 儀表板中，將此隧道的\"公開主機名稱 → 服務\"設定為：</string>
+    <string name="remote_access_cloudflare_service_url_copy">複製服務 URL</string>
+    <string name="remote_access_https_disabled_warning">啟用 HTTPS 時無法進行遠端存取。請停用 HTTPS 以使用隧道。</string>
+    <string name="remote_access_no_route_configured">未配置路由</string>
+    <string name="remote_access_route_misconfigured">路由未指向此伺服器</string>
+
+    <!-- Connection Info -->
+    <string name="connection_info_title">連線資訊</string>
+    <string name="connection_info_ip">IP 位址</string>
+    <string name="connection_info_port">連接埠</string>
+    <string name="connection_info_url">URL</string>
+    <string name="connection_info_token">權杖</string>
+    <string name="connection_info_copy_all">全部複製</string>
+    <string name="connection_info_share">分享</string>
+
+    <!-- Storage Locations -->
+    <string name="storage_locations_title">儲存位置</string>
+    <string name="storage_locations_description">新增儲存位置以透過 MCP 工具啟用檔案操作。每個位置授予對您所選目錄的存取權限。</string>
+    <string name="storage_location_no_locations">尚未新增儲存位置。輕觸 + 新增。</string>
+    <string name="storage_location_path_label">路徑：%1$s</string>
+    <string name="storage_location_add_button">新增儲存位置</string>
+    <string name="storage_location_add_dialog_title">新增儲存位置</string>
+    <string name="storage_location_add_dialog_description_label">描述（可選）</string>
+    <string name="storage_location_add_dialog_description_hint">例如：專案檔案、下載</string>
+    <string name="storage_location_add_dialog_browse">瀏覽</string>
+    <string name="storage_location_add_dialog_selected">已選擇：%1$s</string>
+    <string name="storage_location_add_dialog_no_selection">未選擇目錄</string>
+    <string name="storage_location_add_dialog_add">新增</string>
+    <string name="storage_location_add_dialog_cancel">取消</string>
+    <string name="storage_location_add_dialog_duplicate">此目錄已新增。</string>
+    <string name="storage_location_description_counter">%1$d / %2$d</string>
+    <string name="storage_location_edit_dialog_title">編輯描述</string>
+    <string name="storage_location_edit_dialog_save">儲存</string>
+    <string name="storage_location_delete_dialog_title">移除儲存位置</string>
+    <string name="storage_location_delete_dialog_message">移除\"%1$s\"？MCP 伺服器將無法再存取此位置的檔案。</string>
+    <string name="storage_location_delete_dialog_confirm">移除</string>
+    <string name="storage_location_delete_dialog_cancel">取消</string>
+    <string name="storage_location_allow_write_label">允許寫入</string>
+    <string name="storage_location_allow_delete_label">允許刪除</string>
+    <string name="storage_builtin_locations_title">內建位置</string>
+    <string name="storage_builtin_locations_description">始終可用。使用 MediaStore 讀取和寫入檔案，無需額外設定。</string>
+    <string name="storage_user_locations_title">使用者位置</string>
+    <string name="storage_builtin_grant_all_files">授予對所有檔案的存取權限</string>
+    <string name="storage_builtin_all_files_granted">已授予所有檔案存取權限</string>
+    <string name="storage_builtin_manage_access">管理存取權限</string>
+    <string name="storage_file_size_limit_label">檔案大小限制 (MB)</string>
+    <string name="storage_file_size_limit_error">必須介於 %1$d 和 %2$d MB 之間</string>
+    <string name="storage_download_timeout_label">下載逾時（秒）</string>
+    <string name="storage_download_timeout_error">必須介於 %1$d 和 %2$d 秒之間</string>
+    <string name="storage_allow_http_downloads_label">允許 HTTP 下載</string>
+    <string name="storage_allow_http_downloads_description">允許從不加密的 HTTP URL 下載檔案（安全性較低）</string>
+    <string name="storage_allow_unverified_https_label">允許未驗證的 HTTPS</string>
+    <string name="storage_allow_unverified_https_description">接受未驗證的 HTTPS 憑證進行下載（安全性較低）</string>
+
+    <!-- Event Channel — start/stop dialogs -->
+    <string name="channel_not_configured_dialog_title">未設定端點 URL</string>
+    <string name="channel_not_configured_dialog_body">啟動服務前，請在\"設定 → 事件通道\"中配置事件通道端點 URL。如果您的端點不需要驗證權杖，可以留空。</string>
+    <string name="channel_not_configured_dialog_ok">確定</string>
+
+    <!-- Access settings (OAuth + bearer) -->
+    <string name="access_title">存取</string>
+    <string name="access_oauth_label">OAuth</string>
+    <string name="access_oauth_supporting">需要活動的隧道（HTTPS、公網可達）</string>
+    <string name="access_connected_clients">已連線用戶端</string>
+    <string name="access_bearer_label">Bearer 權杖驗證</string>
+    <string name="access_bearer_token_field_label">Bearer 權杖</string>
+    <string name="access_public_url_label">公開 URL 覆蓋（可選）</string>
+    <string name="access_public_url_supporting">留空則從請求中自動偵測；覆蓋用於 OAuth 後設資料和分享連結的主機</string>
+    <string name="access_no_auth_warning_title">伺服器無驗證</string>
+    <string name="access_no_auth_warning_body">任何能存取此伺服器的人都能完全控制此裝置。</string>
+    <string name="access_internet_exposure_warning_title">可透過網際網路存取</string>
+    <string name="access_internet_exposure_warning_body">隧道已啟用且驗證已關閉，因此 Android Remote Control 可在網際網路上被無任何校驗地存取——任何擁有 URL 的人都能完全控制此裝置。請啟用 OAuth 或 Bearer 權杖。</string>
+    <string name="access_disable_auth_dialog_title">停用所有驗證？</string>
+    <string name="access_disable_auth_dialog_body">這將使伺服器無任何驗證。任何能存取它的人都能完全控制。繼續？</string>
+    <string name="access_disable_auth_confirm">仍然停用</string>
+    <string name="access_disable_auth_cancel">取消</string>
+    <string name="access_token_show">顯示權杖</string>
+    <string name="access_token_hide">隱藏權杖</string>
+    <string name="access_token_copy">複製權杖</string>
+    <string name="access_token_regenerate">重新生成權杖</string>
+
+    <!-- Connected clients -->
+    <string name="oauth_clients_title">已連線用戶端</string>
+    <string name="oauth_clients_empty">暫無已連線用戶端。用戶端透過 OAuth 連線後會顯示在這裡。</string>
+    <string name="oauth_clients_created">建立於 %1$s</string>
+    <string name="oauth_clients_last_used">上次使用於 %1$s</string>
+    <string name="oauth_clients_revoke">撤銷</string>
+    <string name="oauth_clients_revoke_dialog_title">撤銷用戶端？</string>
+    <string name="oauth_clients_revoke_dialog_body">撤銷將立即使此用戶端的權杖失效。它必須重新授權才能重新連線。</string>
+    <string name="oauth_clients_revoke_confirm">撤銷</string>
+    <string name="oauth_clients_revoke_cancel">取消</string>
+
+    <!-- On-device approval -->
+    <string name="approval_title">連線請求</string>
+    <string name="approval_empty">暫無待處理請求。</string>
+    <string name="approval_match_code_label">確認此程式碼與您瀏覽器中的一致：</string>
+    <string name="approval_approve">核准</string>
+    <string name="approval_deny">拒絕</string>
+    <string name="approval_expires_in">在 %1$s 後過期</string>
+    <string name="approval_expired">請求已過期</string>
+    <string name="notification_channel_oauth_approval_name">連線核准</string>
+    <string name="notification_oauth_approval_title">有待處理的連線請求</string>
+    <string name="notification_oauth_approval_body">%1$d 個待處理請求——輕觸檢視</string>
+    <string name="notification_channel_update_name">應用程式更新</string>
+    <string name="notification_update_available_title">有可用更新</string>
+    <string name="notification_update_available_body">版本 %1$s 可用——輕觸檢視釋出</string>
+    <string name="update_banner_text">有可用更新：v%1$s——輕觸檢視</string>
+    <string name="update_banner_open_description">開啟發布頁面</string>
+    <string name="about_updates_section">更新</string>
+    <string name="about_auto_update_label">自動檢查更新</string>
+    <string name="about_check_updates_button">檢查更新</string>
+    <string name="about_update_up_to_date">您已是最新版本</string>
+    <string name="about_update_check_failed">無法檢查更新。請稍後重試。</string>
+    <string name="about_update_dev_build">開發版本已停用更新檢查</string>
+    <string name="about_update_found">版本 %1$s 可用——輕觸檢視釋出</string>
+    <string name="event_channel_subtitle">通知和 WiFi 事件轉發</string>
+    <string name="settings_privacy_title">隱私權模式</string>
+    <string name="settings_privacy_subtitle">向 AI 提供商隱藏個人資料</string>
+    <string name="privacy_enable_label">啟用隱私權模式</string>
+    <string name="privacy_consent_title">下載偵測模型？</string>
+    <string name="privacy_consent_message">隱私權模式需要一個約 154 MB 的偵測模型，從 Hugging Face 下載一次（開源 ai4privacy 模型）並透過校驗和驗證。繼續？</string>
+    <string name="privacy_consent_confirm">下載並啟用</string>
+    <string name="privacy_consent_cancel">取消</string>
+    <string name="privacy_download_progress">正在下載模型… %1$d%%</string>
+    <string name="privacy_download_verifying">正在驗證下載…</string>
+    <string name="privacy_download_failed">模型下載失敗：%1$s</string>
+    <string name="privacy_status_ready">已啟用——模型已載入</string>
+    <string name="privacy_status_deterministic">已啟用——僅模式偵測（模型類別已停用）</string>
+    <string name="privacy_status_unavailable">不可用：%1$s</string>
+    <string name="privacy_status_disabled">已停用</string>
+    <string name="privacy_benchmark_estimate">MCP 工具平均將額外花費約 +%1$s 秒（按 100 個螢幕元素估算）</string>
+    <string name="privacy_benchmark_running">正在測量裝置端效能……您可以繼續使用應用程式或關閉隱私權模式；測量會自動完成</string>
+    <string name="privacy_enable_preparing">正在準備隱私權模式…</string>
+    <string name="privacy_detection_rates_header">實測偵測率</string>
+    <string name="privacy_detection_rates_caption">每類偵測到的個人資料比例，使用專案在 8 種語言的真實 UI 風格內容上執行的有效性基準測得。實際結果隨內容和語言而異。</string>
+    <string name="privacy_categories_header">受保護的類別</string>
+    <string name="privacy_category_credentials">密碼與憑證</string>
+    <string name="privacy_category_cards_iban">付款卡與 IBAN</string>
+    <string name="privacy_category_emails">電子郵件地址</string>
+    <string name="privacy_category_phones">電話號碼</string>
+    <string name="privacy_category_names">姓名</string>
+    <string name="privacy_category_addresses">地址</string>
+    <string name="privacy_category_national_ids">國民身分證件與檔案</string>
+    <string name="privacy_mode_header">脫敏樣式</string>
+    <string name="privacy_mode_pseudonymize">假名化（使用一致的佔位符，工具仍可正常工作）</string>
+    <string name="privacy_mode_redact">完全脫敏</string>
+    <string name="privacy_format_header">佔位符格式</string>
+    <string name="privacy_format_hashed">一致——相同的值始終保留相同的佔位符 (EMAIL#a1b2c)</string>
+    <string name="privacy_format_numbered">編號——按工作階段順序（[EMAIL_1]）</string>
+    <string name="privacy_disclaimer">偵測是盡力而為的緩解措施，並非保證。沒有偵測器能捕獲所有個人資料；截圖僅在標記的螢幕元素有邊界時才會被遮蓋。</string>
+    <string name="privacy_card_title">擔心個人資料？</string>
+    <string name="privacy_card_action">設定隱私權模式</string>
+    <string name="privacy_card_dismiss">關閉</string>
+</resources>
